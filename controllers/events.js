@@ -33,7 +33,7 @@ const readEvents = async( req, res = response )=>
 {
     const events = await Event.find().populate( 'user', 'name' );
 
-    res.status(201).json({
+    res.status(200).json({
         ok: true,
         events,
      });
